@@ -1,0 +1,11 @@
+{
+  "theme": "moonstone",
+  "enabledCssSnippets": [
+    "my"
+  ],
+  "baseFontSizeAction": true,
+  "accentColor": "#4dd2ff",
+  "cssTheme": "",
+  "nativeMenus": false,
+  "baseFontSize": 21
+}

@@ -1,0 +1,10 @@
+{
+  "fileDirections": {
+    "דוחות מכין מעבדה 1/דוח של נועם B1/דוח מכין B1.md": "auto"
+  },
+  "defaultDirection": "auto",
+  "rememberPerFile": true,
+  "setNoteTitleDirection": true,
+  "setYamlDirection": false,
+  "statusBar": true
+}

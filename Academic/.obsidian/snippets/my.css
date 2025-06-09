@@ -1,0 +1,353 @@
+/* All images */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  img[alt*="bwhite"] {
+    background-color: white;
+  }
+  
+  img[alt*="invert"] {
+    filter: invert(1);
+  }
+  
+  img[alt*="bmult"] {
+    mix-blend-mode: screen;
+  }
+  
+/* General */
+  .theme-dark {
+    --figure-background-color: var(--color-base-100);
+  }
+  
+  .theme-light {
+    --figure-background-color: var(--color-base-00);
+  }
+  
+  /* Not code blocks */
+  .markdown-rendered code {
+    direction: ltr;
+    unicode-bidi: plaintext;
+    display: inline-block;
+  }
+  
+  /* Center tables */
+  table {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+/* My custom CSS */
+
+
+/* Set the outline direction */
+.workspace-leaf-content[data-type=outline] {
+  --line-height-tight: var(--outline-item-height);
+  direction: unset;
+  text-align: start;
+}
+/* images with the alternative text "fullwidth" will be displayed at 100% width */
+img[alt*="fullwidth"] {
+  width: 100%;
+}
+
+  /* Align mermaid diagrams to center
+  div.mermaid {
+    text-align: center; /* replace with left or right to align to the left or right */
+  /*}
+  /* Make mermaid diagrams scale to width
+  .mermaid svg { 
+  max-width: 100%; 
+  height: auto;
+  } */
+
+  /* file-color plugin snippet */
+/*   .workspace-leaf-content[data-type="file-explorer"] .nav-files-container .mod-root > .nav-folder-children > .nav-folder > .nav-folder-title {
+    background-color: var(--file-color-color); 
+    color: var(--text-normal);
+    opacity: 0.85;
+    }
+    
+    .workspace-leaf-content[data-type="file-explorer"] .nav-files-container :not(.mod-root) > .nav-folder-children > .nav-folder > :not(.nav-file-title).nav-folder-title {
+    background-color: rgba(80, 170, 255, 0.03);
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--file-color-color); 
+    } */
+
+  /* Mermaid Diagrams Scaling */
+  .mermaid svg[width][height][viewBox] {
+    min-width: 50% !important;
+    min-height: 50% !important;
+    max-width: 95%;
+    max-height: 95%;
+  }
+  /* Change mermaid fill color */
+  .mermaid svg rect {
+    fill: rgba(0,0,0,0) !important;
+    stroke: rgb(99, 172, 236) !important;
+  }
+  .mermaid svg polygon {
+    fill: var(--color-base-00) !important;
+    stroke: rgb(126, 195, 255) !important;
+  }
+
+  div.mermaid {
+    margin-left: 0 !important;
+    min-width: 400px !important;
+    min-height: 400px !important;
+    text-align: center;
+    resize: both;
+    overflow:auto;
+    margin-bottom: 2px;
+    position:relative;
+    max-height: 600px;
+    max-width: 100%;
+  }
+  div.mermaid::after {
+    content:'';
+    display:block;
+    width:10px;
+    height:10px;
+    background-color:rgb(255, 238, 0);
+    position:absolute;
+    right:0;
+    bottom:0;
+  }
+  
+  /* Center excalidraw Embeddings and enable resizing */
+  div.excalidraw-svg > div{
+    /* min-width: 30%;
+    min-height: auto;
+    resize: horizontal;
+    width:fit-content;
+    max-width: 95% !important;
+    max-height: 100% ; */
+    margin-left: auto;
+    margin-right: auto;
+   /* overflow: auto; */
+  }
+  /* div.excalidraw-svg > div::after{
+    content:'';
+    display:block;
+    width:30px;
+    height:30px;
+    position:absolute;
+    color:rgb(0, 255, 85);
+    right: 10px;
+    bottom: 10px;
+  } */
+
+  /* Stacked Tabs Width Adjusment */
+  body {
+    --tab-stacked-pane-width: 100%;
+  }
+
+  /* Change color of all folder names to Black */
+  .nav-folder-title {
+    color: black !important; /* Change the color to White */
+  }
+  /* Change the color of all file names to Blue */
+  .nav-file-title {
+    color: rgb(60, 160, 254) !important;
+  }
+
+  /* Change color of folder titles named "Attachments" to dark gray */
+  .nav-folder-title[data-path*="Attachments"],
+  .nav-folder-title:has(> span[title="Attachments"]) {
+    color: rgb(178, 178, 178) !important;
+  }
+  
+
+  /* Hide "README" file */
+  /* .nav-file-title[data-path*="README"] {
+    display: none !important; /* Hide the file */
+  /*} */
+
+  /* Hide "Excalidraw" folder */
+  /*.nav-folder-title[data-path*="Excalidraw"] {
+    display: none !important;
+  }*/
+
+    /* Hide "Templates" folder */
+    /*.nav-folder-title[data-path*="Templates"] {
+      display: none !important;
+    } */
+  /* Increase the size of math block font and spacing 
+  .math {
+    font-size: 1.2em;
+    line-height: 0.833333;
+  }
+  .math-block mjx-mtr:not(:first-child) mjx-mtd {
+    padding-top: 1.0em !important;
+  }
+  .math-block mjx-stretchy-v {
+    margin-inline: 0em !important;
+    font-size: 1.4em !important;
+  } */
+
+/* Hebrew text block for mathjax using the \mbox{} command */
+  /*.math-block {
+    mjx-mstyle {
+      mjx-mtext {
+      direction:rtl;
+      }
+      mjx-utext {
+        font-family: 'Cambria Math','Cambria' !important;
+      }
+    }
+  } */
+
+  .inline-title, .HyperMD-header-1 {
+    text-align: center;
+  }
+
+
+  /* Change the color of the cursor caret */
+/* body.fancy-cursor .markdown-source-view.mod-cm6 .cm-content,
+body .markdown-source-view.mod-cm6 .cm-content,
+body.fancy-cursor .mod-cm6 .cm-line {
+  caret-color: rgb(0, 157, 255);
+} */
+  
+  
+ /* attempt at making mathjax resizable
+  mjx-container[jax="CHTML"][display="true"] mjx-math {
+    padding: 0;
+    overflow: auto;
+    max-width: 100%;
+    resize: both;
+    font-size: 1.7vw; 
+} */ 
+
+/* End Of My Custom CSS */
+
+
+  
+  /* Center table headers */
+  .markdown-rendered thead tr > th {
+    text-align: center !important;
+  }
+  /* Center tables */
+  div.table-wrapper  {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Allow images in callouts to smoothly interact with the callout background */
+  .callout {
+    mix-blend-mode: inherit;
+  }
+  /* block quotes (for image captioning) */
+.markdown-rendered blockquote {
+    border-left: 0;
+    border-right: 0;
+    font-size: var(--font-caption-size);
+    color: var(--icon-color-hover);
+    text-align: center;
+  }
+  
+  .markdown-rendered blockquote p {
+    text-align: center !important;
+  }
+
+  
+  /* transparent background, black themed */
+  .theme-dark img[alt*="book"] {
+    mix-blend-mode: screen;
+    filter: invert(1);
+  }
+  
+  .theme-light img[alt*="book"] {
+    mix-blend-mode: multiply;
+  }
+  
+  /* transparent background, black themed, with hue filter */
+  .theme-dark img[alt*="bookhue"] {
+    mix-blend-mode: screen;
+    filter: hue-rotate(180deg) invert(1);
+  }
+  
+  .theme-light img[alt*="bookhue"] {
+    mix-blend-mode: multiply;
+  }
+  
+  /* Vector art also need to have a transparent background */
+  .theme-light img[alt*="svg"] {
+    filter: unset !important;
+  }
+  
+  .theme-light img[alt*="ignore"] {
+    filter: unset !important;
+  }
+  
+  /* Dark theme for GeoGebra applets */
+  .theme-dark .geo {
+    mix-blend-mode: screen;
+    filter: invert(1);
+  }
+  
+  .theme-light .geo {
+    mix-blend-mode: multiply;
+  }
+  
+  /* Center iframes */
+  iframe.external-embed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /*
+Local only
+==========
+ */
+
+
+ .app-container {
+    --font-caption-size: 18px;
+   } 
+  
+  /* .markdown-rendered .list-bullet {
+    float: inline-start;
+  }
+  
+  .markdown-preview-view.is-auto .esm-ltr {
+    direction: rtl;
+    text-align-last: unset;
+  }
+  
+  .HyperMD-list-line {
+    direction: rtl !important;
+  } */   
+    
+    
+
+  /*
+PDF only
+==========
+ */
+
+
+
+@media print {
+    body {
+      font-family: "Assistant","Cambria Math" !important;
+      --font-interface-override: "Assistant","Cambria Math" !important;
+      --font-print: "Assistant","Cambria Math" !important;
+      --font-text-size: 12pt !important;
+    }
+    /* Horizontal separator. --------------------------------------------------------------- */
+    hr { /* Manual page-break using "---". */
+      border: none !important;
+      border-top: 0px solid lightgray !important;
+      page-break-after: always !important;
+    }
+    h1 { /* Title. */
+      text-align: center !important;
+      font-size: 18pt !important;
+      margin-top: 0px !important;
+  }
+}
